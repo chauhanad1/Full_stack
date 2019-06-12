@@ -7,8 +7,9 @@
     margin: 0px auto;
     padding: 50px 0px 50px 30px;
     min-height: 200px;
+    
     border-left: 20px solid purple;
-    border-bottom: 2px solid black;
+   border-bottom: 2px solid black;
     border-top: 2px solid black;
     
 }
@@ -31,4 +32,12 @@
 }
 #headings{
     color: dimgrey;
+}
+body{
+padding-top: 50px;
+z-index: 0px;
+}
+
+.navbar-dark{
+    background-color: #512DAB;
 }
