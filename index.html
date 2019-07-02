@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
 
-    <link rel="stylesheet" href="css/styles-old.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
 
@@ -31,7 +31,7 @@
                         <li class="nav-item"><a class="nav-link " href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact Us</a></li>
                     </ul>
                     <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <a id="login">
                             <span class="fa fa-sign-in"> Login</span>
                         </a>
                     </span>
@@ -44,7 +44,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="dismissButton2">
                         &times;
                     </button>
                 </div>
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                 <div class="form-row">
-                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto" id="dismissButton" >Cancel</button>
                                     <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                                 </div>
                          </form>
@@ -87,57 +87,57 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                <a  data-toggle="modal" data-target="#reserveform" role="button" class="btn btn-block btn-warning">Reserve Table</a>
+                <a id="reserveButton" role="button" class="btn btn-block btn-warning">Reserve Table</a>
                 </div>
             </div>
         </div>
     </header>
-    <div id="reserveform" class="modal fade" role="dialog">
+    <div id="reservemodal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">Reserve a Table</h4>
-                        <button type="button" class="close" data-dismiss="modal">
+                        <button type="button" class="close" id="dismissButton3">
                             &times;
                         </button>
                     </div>
                     <div class="modal-body  ">
                             <form>
                                     <div class="form-group row">
-                                            <label for="noOfGuests" class="col-md-2 col-form-label">Number of Guests</label>
-                                            <div class="col-md-10">
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="noOfGuests">1
-                                                    </label>
-                                                </div>
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="noOfGuests">2
-                                                    </label>
-                                                </div>
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="noOfGuests">3
-                                                    </label>
-                                                </div>  
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="noOfGuests">4
-                                                    </label>
-                                                </div>
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="noOfGuests">5
-                                                    </label>
-                                                </div>
-                                                <div class="form-check-inline">
-                                                    <label class="form-check-label">
-                                                        <input type="radio" class="form-check-input" name="noOfGuests">6
-                                                    </label>
-                                                </div>  
+                                        <label for="noOfGuests" class="col-md-2 col-form-label">Number of Guests</label>
+                                        <div class="col-md-10">
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="noOfGuests">1
+                                                </label>
                                             </div>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="noOfGuests">2
+                                                </label>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="noOfGuests">3
+                                                </label>
+                                            </div>  
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="noOfGuests">4
+                                                </label>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="noOfGuests">5
+                                                </label>
+                                            </div>
+                                            <div class="form-check-inline">
+                                                 <label class="form-check-label">
+                                                    <input type="radio" class="form-check-input" name="noOfGuests">6
+                                                </label>
+                                            </div>  
                                         </div>
+                                    </div>
                                         <div class="form-group row">
                                             <label for="section" class="col-md-2 col-form-label"><b>Section</b></label>
                                             <div class="btn-group btn-group-toggle" data-toggle="buttons">
@@ -160,7 +160,7 @@
                                         </div>
                                         <div class="form-group row">
                                                 <div class=" offset-md-4 col-md-4">
-                                                        <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">
+                                                        <button type="button" class="btn btn-secondary btn-sm ml-auto" id="dismissButton4">
                                                         Cancel
                                                         </button>
                                                         
@@ -173,7 +173,7 @@
                                                 </div>
                                                
                                                      
-                                            </div>
+                                        </div>
                                </form>
                     </div>
                 </div>
@@ -361,6 +361,32 @@
             $('[data-toggle="tooltip"]').tooltip();
         });
         </script> -->
+        <script>
+        $("#login").click(function(){
+            $("#loginModal").modal('toggle');
+        })
+       
+        $("#dismissButton").click(function(){
+            $("#loginModal").modal("hide");
+        })
+
+        $("#dismissButton2").click(function(){
+            $("#loginModal").modal("hide");
+        })
+
+        $("#reserveButton").click(function(){
+            $("#reservemodal").modal('toggle');
+        })
+       
+        $("#dismissButton3").click(function(){
+            $("#reservemodal").modal("hide");
+        })
+
+        $("#dismissButton4").click(function(){
+            $("#reservemodal").modal("hide");
+        })
+        </script>
+      
         
 </body>
 
